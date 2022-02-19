@@ -2,7 +2,14 @@
 
 Demo universal react micro-apps and features.
 
-## Steps
+## Run demo
+
+```sh
+npm i
+npm run dev
+```
+
+## Add micro-app
 
 ```sh
 npx create-universal-react
