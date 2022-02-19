@@ -1,0 +1,50 @@
+{
+  "name": "universal-react",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "modules/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "storybook:install": "cd storybook && npm run",
+    "storybook:run": "cd storybook && npm run start-storybook",
+    "storybook:build": "cd storybook && npm run build-storybook",
+    "generate": "generate && npm run format"
+  },
+  "devDependencies": {
+    "prettier": "^2.5.1",
+    "turbo": "latest",
+    "@xt-pagesource/generate-plop": "^1.1.0"
+  },
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": ">=14.0.0"
+  },
+  "packageManager": "npm@7.18.1",
+  "universal-react": {
+    "apps": [
+      {
+        "appType": "ssr",
+        "appName": "home",
+        "optionalFeatures": []
+      },
+      {
+        "appType": "microApp",
+        "appName": "header",
+        "optionalFeatures": []
+      },
+      {
+        "appType": "microApp",
+        "appName": "footer",
+        "optionalFeatures": []
+      }
+    ],
+    "rootOptionalFeatures": []
+  }
+}
